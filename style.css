@@ -1,0 +1,109 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+
+:root {
+/* ### Primary */
+--light-cyan: hsl(193, 38%, 86%);
+--neon-green: hsl(150, 100%, 66%);
+
+/* ### Neutral */
+--grayish-blue: hsl(217, 19%, 38%);
+--dark-grayish-blue: hsl(217, 19%, 24%);
+--dark-blue: hsl(218, 23%, 16%);
+
+--ff-primary: 'Manrope', sans-serif;
+--fw-semiBold: 600;
+--transition: all 300ms ease;
+}
+
+/* ==================================================
+                    General CSS
+==================================================== */
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: var(--dark-blue);
+    font-family: var(--ff-primary);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.advice-container {
+    position: relative;
+    width: 90%;
+    background: var(--dark-grayish-blue);
+    padding: 2.5rem 1.5rem 4rem;
+    border-radius: .6rem;
+    text-align: center;
+    margin: 12rem auto;
+    box-shadow: -8px 8px 14px 0px rgba(0, 0, 0, .3);
+}
+
+.advice__label {
+    color: var(--neon-green);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .65rem;
+    /* font-weight: 400; */
+}
+
+.advice__text__box {
+    color: var(--light-cyan);
+    /* line-height: ; */
+    margin: 1.7rem 0 1.2rem;
+    font-size: 1.5rem;
+    font-weight: var(--fw-semiBold);
+}
+
+.advice__decoration {
+    
+}
+
+.advice__dice__icon {
+    position: absolute;
+    left: 50%;
+    bottom: -3rem;
+    transform: translate(-50%, -50%);
+    background: var(--neon-green);
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.75rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.advice__dice__icon:hover {
+    box-shadow: 0px 0px 20px 0px hsla(150, 100%, 66%, .75);
+}
+
+
+.advice__dice__icon img {
+    width: 1.2rem;
+}
+
+
+
+/* ==================================================
+                    Media Query(desktop)
+==================================================== */
+@media screen and (min-width: 30em) {
+    .advice-container {
+        max-width: 33rem;
+    }
+}
