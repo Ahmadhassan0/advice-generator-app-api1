@@ -5,6 +5,7 @@ const api = "https://api.adviceslip.com/advice";
 
 async function getAdvice() {
     const res = await fetch(api);
+    console.log(res)
     const {slip:{id,advice}} = await res.json();
     adviceId.innerText = id;
     adviceText.innerText = advice;
